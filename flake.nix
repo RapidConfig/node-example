@@ -14,10 +14,10 @@
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
               nodejs
-              nodePackages.cat-me
+              nodePackages.sloc
             ];
             shellHook = ''
-              node -e 'let ascii_text_generator = require('ascii-text-generator'); console.log(ascii_text_generator("NodeJS"));'
+              node script.js
             '';
           };
         }
